@@ -13,7 +13,7 @@ namespace PhotoKml
         static void Main(string[] args)
         {
             // Replace this with the path to your image file
-            string imagePath = @"D:\Europe 2023 Photos\Alan-Phone";
+            string imagePath = @"Image path here.";
             var baseDirectory = Environment.CurrentDirectory; 
 
             List<Photo> photoList = new();

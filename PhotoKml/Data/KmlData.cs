@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using PhotoKml.Models;
 
-namespace PhotoKml.Models
+namespace PhotoKml.Data
 {
     internal class KmlData
     {
