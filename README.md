@@ -10,7 +10,7 @@ The following image shows the information that I am collecting from the photos.
 
 ![Map data for a point](./map-data.jpg "Map data for a point")
 
-**Note:** this project use the NuGet package, MetaDataExtractor 2.8.1.
+**Note:** this project uses the NuGet package, MetaDataExtractor 2.8.1.
 
 To install:
 
