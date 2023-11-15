@@ -13,7 +13,7 @@ namespace PhotoKml
         static void Main(string[] args)
         {
             // Replace this with the path to your image file
-            string imagePath = @"Image path here.";
+            string imagePath = @"E:\Images";
             var baseDirectory = Environment.CurrentDirectory; 
 
             List<Photo> photoList = new();
@@ -22,6 +22,13 @@ namespace PhotoKml
             ImageData.GetImageList(imageList, imagePath);
 
             ExifData.GetPhotoMetaData(photoList, imageList, imagePath);
+
+            foreach (Photo photo in photoList) 
+            {
+                Console.WriteLine($"{photo.Name}, {photo.TimeTaken}, {photo.CreationTime}, {photo.Description}, {photo.Latitude}, {photo.Longitude}, {photo.Altitude}");
+            }
+
+            return;
 
             StringBuilder sb = new();
 
@@ -32,6 +39,8 @@ namespace PhotoKml
             sb = KmlData.CreateFooter(sb);
 
             KmlData.CreateKmlFile(sb, baseDirectory);
+
+            Console.WriteLine("Finito...");
         }
     }
 }

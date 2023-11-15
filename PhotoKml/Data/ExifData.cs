@@ -35,15 +35,15 @@ namespace PhotoKml.Data
                     }
                 }
 
-                if (photo.Latitude != 0.0 && photo.Longitude != 0.0)
-                {
+                // if (photo.Latitude != 0.0 && photo.Longitude != 0.0)
+                // {
                     AddDescription(photo);
                     photoList.Add(photo);
-                }
-                else
-                {
+                // }
+                // else
+                // {
                     Console.WriteLine($"{photo.Name}");
-                }
+                // }
             }
         }
 

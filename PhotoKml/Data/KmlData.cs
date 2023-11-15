@@ -149,8 +149,8 @@ namespace PhotoKml.Data
             sb.Append("\t\t\t</Icon>\n");
             sb.Append("\t\t</IconStyle>\n");
             sb.Append("\t</Style>\n");
-            sb.Append("\t<name>Europe 2023 - Photo Location Points</name>\n");
-            sb.Append("\t<description>Our Europe 2023 trip.</description>\n");
+            sb.Append("\t<name>Australia 2023 - Photo Location Points</name>\n");
+            sb.Append("\t<description>Our 2023 trip.</description>\n");
             sb.Append("\t<visibility>1</visibility>\n");
 
             return sb;
@@ -166,7 +166,7 @@ namespace PhotoKml.Data
 
         internal static void CreateKmlFile(StringBuilder sb, string baseDirectory)
         {
-            var fileName = "Europe2023Photos.kml";
+            var fileName = "Australia2023Photos.kml";
             var fullPath = baseDirectory + "\\" + fileName;
             File.WriteAllText(fullPath, sb.ToString());
         }
