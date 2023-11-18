@@ -42,7 +42,7 @@ namespace PhotoKml.Data
                 // }
                 // else
                 // {
-                    Console.WriteLine($"{photo.Name}");
+                    // Console.WriteLine($"{photo.Name}");
                 // }
             }
         }
@@ -51,6 +51,7 @@ namespace PhotoKml.Data
         {
             string description = $"<![CDATA[Date: {photo.CreationTime}<br />Folder: {photo.Folder}<br />Altitude: {photo.Altitude} metres]]>";
             photo.Description = description;
+            photo.Title = "";
         }
 
         private static void ProcessExifData(Photo photo, ExifSubIfdDirectory exifSubIfDirectory)
@@ -99,6 +100,7 @@ namespace PhotoKml.Data
             Photo photo = new()
             {
                 Name = Path.GetFileNameWithoutExtension(image),
+                Title = "",
                 Folder = image.Replace(imagePath + "\\", string.Empty),
                 Latitude = 0.0,
                 Longitude = 0.0,

@@ -14,21 +14,23 @@ namespace PhotoKml
         {
             // Replace this with the path to your image file
             string imagePath = @"E:\Images";
-            var baseDirectory = Environment.CurrentDirectory; 
+            var baseDirectory = Environment.CurrentDirectory;
 
+            //// *** Don't run this again, added files to the database. ***
+            //List<Photo> photoList = new();
+            //List<string> imageList = new();
+
+            //ImageData.GetImageList(imageList, imagePath);
+
+            //ExifData.GetPhotoMetaData(photoList, imageList, imagePath);
+
+            //KmlData.AddPhotos(photoList);
+            //// *** End. ***
+
+            //// *** Read back from the database and recreate the KML file. ****
             List<Photo> photoList = new();
-            List<string> imageList = new();
 
-            ImageData.GetImageList(imageList, imagePath);
-
-            ExifData.GetPhotoMetaData(photoList, imageList, imagePath);
-
-            foreach (Photo photo in photoList) 
-            {
-                Console.WriteLine($"{photo.Name}, {photo.TimeTaken}, {photo.CreationTime}, {photo.Description}, {photo.Latitude}, {photo.Longitude}, {photo.Altitude}");
-            }
-
-            return;
+            photoList = KmlData.CreatePhotoList();
 
             StringBuilder sb = new();
 
